@@ -1,0 +1,169 @@
+.container {
+  width: 90%; /* Adjusts automatically to the screen size */
+  max-width: 1200px; /* Prevents it from being too wide on large screens */
+}
+
+header{
+  
+    color: #0c0101;
+    
+}
+h1 {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top:4%;
+    left:18%;
+    font-size: 4.5rem;  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    width: 21%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem; 
+    
+  }
+}
+
+#img{
+    position: relative;
+    left:2px;
+    top:4px;
+}
+body{
+  background-image: url("https://files.oaiusercontent.com/file-VbrFarfj9SVofm9Y4bqNDU?se=2025-01-06T08%3A23%3A08Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da914c510-f7d4-48cc-8154-daeffd3b510d.webp&sig=gvpu3p/k5N5yVKvbvtCKQnsitiERxX%2BxAVRpKI91I3k%3D" ) ;
+  filter: brightness(0.7);
+  background-size: cover; 
+  background-position: center center; 
+  background-attachment: fixed; 
+  height: 100vh; 
+  margin: 0;
+  transition: background-image 1s ease;
+}
+.bus {
+    color: rgb(18, 17, 19);
+    font-family: cursive;
+    font-size: 3.7rem;
+    position: absolute; 
+    top: 20%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Add text shadow */
+    animation: shine 2s infinite alternate; /* Animation for shine effect */
+    letter-spacing: 3px; 
+  }
+  .bus:hover{
+    color: #afa8b1;
+  }
+  @media (max-width: 768px) {
+    .button1 {
+      font-size: 3.4rem; /* Smaller font for tablets */
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .button1{
+      font-size: 2rem; /* Smaller font for mobiles */
+      padding: 6px 12px;
+    }
+  }
+  #Choose-Route{
+    position: relative;
+    top:163px;
+    font-size: 45px;
+    color: rgb(18, 17, 19);
+  }
+  #Choose-Bus-Size{
+    position: relative;
+    top:175px;
+    font-size: 45px;
+    color: rgb(18, 17, 19);
+  }
+  #Choose-event{
+    position: relative;
+    top:175px;
+    font-size: 45px;
+    color: rgb(18, 17, 19);
+  }
+  #choose-Time{
+    position: relative;
+    top:175px;
+    font-size: 45px;
+    color: rgb(18, 17, 19);
+  }
+  #choose-Facility{
+    position: relative;
+    top:175px;
+    font-size: 45px;
+    color: rgb(18, 17, 19);
+  }
+  select {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    top: 174px;
+    width: 100%;
+    padding: 25px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: rgba(217, 182, 247, 0.233); 
+    background-position: center;
+    border: 1px solid #ddd; /* Optional: Border to make it stand out */
+    color: #0e0d0d;  /* Set text color for visibility */
+}
+
+
+  #confirmBooking{
+    display: flex;
+    flex-wrap: wrap;
+    color: #0a0a0a;
+    cursor: pointer;
+    padding :12px;
+    margin-left: 45%;
+    position: relative;
+    top:200px;
+    bottom: 80px;
+    font-size: 2.5rem;
+    border-radius: 5px;
+    
+  }
+  #confirmBooking:hover{
+    color:rgb(50, 5, 92)
+  }
+  @media (max-width: 768px) {
+    .confirmBooking {
+      font-size: 3.4rem; /* Smaller font for tablets */
+     
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .confirmBooking{
+      font-size: 2rem; /* Smaller font for mobiles */
+      padding: 6px 12px;
+    }
+  }
+.message {
+    font-size: 35px;
+    margin-top: 10px;
+    position: relative;
+    top:218px;
+}
+#errorMessage {
+  color: rgb(12, 14, 13);
+
+  font-weight: bold;
+  
+}
+#resultMessage {
+    color: rgb(10, 10, 10); 
+    font-weight: bold;
+}
