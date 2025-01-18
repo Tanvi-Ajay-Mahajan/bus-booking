@@ -2,85 +2,82 @@
     <head>
     <title>GoWheels</title>
     <link rel="stylesheet" href="style.css">
-    
-   
-</head>
-    <body>
-      
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <header>
-        <img src="https://gobikes-prod-public.s3.ap-south-1.amazonaws.com/uploads/admin/site/d95fb648-07d3-473d-8804-bd9b72471e4f.png" height=30% width=100%>
-        
-    </header>
-    
-    <p class="bus" onclick="toggleOptions()">Bus Booking</p>
-    <div class="form-group">
-        <label for="route" id="Choose-Route">Choose Route</label>
-        <select id="route">
-          <option value="">Select Route</option>
-          <option value="route1">Route 1 North Pune: Shivajinagar, Aundh, Bhosari, Pimpri-Chinchwad</option>
-          <option value="route2">Route 2 South Pune: Katraj, Bibwewadi, Sahakar Nagar, Kondhwa</option>
-          <option value="route3">Route 3 East Pune: Kharadi, Viman Nagar, Wagholi, Hadapsar</option>
-          <option value="route4">Route 4 West Pune: Baner, Bavdhan, Kothrud, Hinjewadi</option>
-        </select>
-      </div>
+  </head>
+  <body>
+      <header>
+          <img src="https://gobikes-prod-public.s3.ap-south-1.amazonaws.com/uploads/admin/site/d95fb648-07d3-473d-8804-bd9b72471e4f.png" alt="GoWheels Logo">
+      </header>
   
-      <!-- Bus Size Selection -->
-      <div class="form-group">
-        <label for="busSize" id="Choose-Bus-Size">Choose Bus Size</label>
-        <select id="busSize">
-          <option value="">Select Bus Size</option>
-          <option value="30">30 Seats</option>
-          <option value="40">40 Seats</option>
-          <option value="50">50 Seats</option>
-          <option value="60">60 Seats</option>
-          <option value="80">80 Seats</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="busEvent" id="Choose-event">Choose Event</label>
-        <select id="busEvent">
-          <option value="">Select your Event </option>
-          <option value="Weddings">Weddings</option>
-          <option value="Festivals">Festivals</option>
-          <option value="Sports Events">Sports Events</option>
-          <option value="Corporate Events">Corporate Events</option>
-        </select>
+      <div id="main_div">
+          <p class="bus" onclick="toggleOptions()">Bus Booking</p>
+  
+          <div class="form-group">
+              <label for="route">Choose Route</label>
+              <select id="route">
+                  <option value="">Select Route</option>
+                  <option value="route1">Route 1 North Pune: Shivajinagar, Aundh, Bhosari, Pimpri-Chinchwad</option>
+                  <option value="route2">Route 2 South Pune: Katraj, Bibwewadi, Sahakar Nagar, Kondhwa</option>
+                  <option value="route3">Route 3 East Pune: Kharadi, Viman Nagar, Wagholi, Hadapsar</option>
+                  <option value="route4">Route 4 West Pune: Baner, Bavdhan, Kothrud, Hinjewadi</option>
+              </select>
+          </div>
+  
+          <div class="form-group">
+              <label for="busSize">Choose Bus Size</label>
+              <select id="busSize">
+                  <option value="">Select Bus Size</option>
+                  <option value="30">30 Seats</option>
+                  <option value="40">40 Seats</option>
+                  <option value="50">50 Seats</option>
+                  <option value="60">60 Seats</option>
+                  <option value="80">80 Seats</option>
+              </select>
+          </div>
+  
+          <div class="form-group">
+              <label for="busEvent">Choose Event</label>
+              <select id="busEvent">
+                  <option value="">Select your Event</option>
+                  <option value="Weddings">Weddings</option>
+                  <option value="Festivals">Festivals</option>
+                  <option value="Sports Events">Sports Events</option>
+                  <option value="Corporate Events">Corporate Events</option>
+              </select>
+          </div>
+  
+          <div class="form-group">
+              <label for="busFacility">Choose Facility</label>
+              <select id="busFacility">
+                  <option value="">Select Facility</option>
+                  <option value="wifi">Wi-Fi</option>
+                  <option value="ac">Air Conditioning</option>
+                  <option value="tv">TV</option>
+              </select>
+          </div>
+  
+          <div class="form-group">
+              <label for="time">Choose Time</label>
+              <select id="time">
+                  <option value="">Select Time</option>
+                  <option value="6:00AM">6:00 AM</option>
+                  <option value="9:00AM">9:00 AM</option>
+                  <option value="12:00PM">12:00 PM</option>
+                  <option value="3:00PM">3:00 PM</option>
+                  <option value="6:00PM">6:00 PM</option>
+              </select>
+          </div>
+  
+          <button id="confirmBooking">Confirm Booking</button>
+
+          <div id="errorMessage" class="message"></div>
+          <div id="resultMessage" style="margin-top:10px;" class="message">
+              <p id="resultMessage"></p>
+          </div>
       </div>
 
-      <div class="form-group">
-        <label for="busFacility" id="choose-Facility">Choose facility</label>
-        <select id="busFacility">
-            <option value="">Select facility</option>
-            <option value="wifi">Wi-Fi</option>
-            <option value="ac">Air Conditioning</option>
-            <option value="tv">TV</option>
-        </select>
-      </div>
+      <script src="bus.js"></script>
+      <script src="index.js"></script>
+
+  </body>
+  </html>
   
-      <!-- Time Selection -->
-      <div class="form-group">
-        <label for="time" id="choose-Time">Choose Time</label>
-        <select id="time">
-          <option value="">Select Time</option>
-          <option value="6:00AM">6:00 AM</option>
-          <option value="9:00AM">9:00 AM</option>
-          <option value="12:00PM">12:00 PM</option>
-          <option value="3:00PM">3:00 PM</option>
-          <option value="6:00PM">6:00 PM</option>
-        </select>
-      </div>
-  
-      <!-- Confirm Booking Button -->
-      <button id="confirmBooking" onclick="confirmBooking" disabled>Confirm Booking</button>
-  
-      <div id="errorMessage" class="message"></div>
-  <div id="result" style="display:none; margin-top:10px;"class="message" >
-    <p id="resultMessage"></p>
-  </div>
-  
-  <script src="bus.js"></script> 
-  <script src="index.js"></script> 
-    
-</body>
-</html>
